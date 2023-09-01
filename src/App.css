@@ -1,0 +1,127 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.App{
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #f0f3e3;
+}
+.headingImage{
+  text-align: center;
+ 
+  color:rgb(128, 12, 105)ff;
+  font-size: 1.3rem;
+  font-weight: 400;
+
+  background-color: 
+  #f0f3e3;
+  padding:0.5rem 4rem;
+  margin-bottom: 5px;
+  width:100vw;
+}
+.mainImage{
+  display: flex;
+  align-items: center;
+  border-radius: 5px; 
+  box-shadow: 10px 10px 0px 0px rgba(83, 82, 82, 0.75);
+-webkit-box-shadow: 10px 10px 0px 0px rgba(83, 82, 82, 0.75);
+-moz-box-shadow: 10px 10px 0px 0px rgba(83, 82, 82, 0.75);
+}
+.mainImage img{
+  width:53vw;
+  height:53vh;
+  border-radius: 15px;
+}
+
+.imageViewer{
+  width: 100vw;
+  height:35vh;
+  bottom: 0;
+  padding:10px;
+  /* padding-bottom: 1rem; */
+  position: absolute;
+  background-color: #f3f3f7;
+  overflow: hidden;
+
+}
+.imageViewer img{
+  width:18vw;
+  
+  height:23vh;
+  object-fit: cover;
+  border:1px solid black;
+  cursor: pointer;
+}
+.imageViewer img.border{
+  opacity: 0.4;
+  border: 3px solid rgb(19, 19, 22);
+  transition: transform 0.3s;
+  transform: scale(1.4);
+  width: 30vw;
+  height: 25vh;
+  border-radius: 10px;
+  /* border */
+ 
+}
+/* .imageViewer img:hover{
+  transform: scale(1.1);
+  -ms-transform : scale(1.1);
+  -webkit-transform : scale(1.1);
+  
+} */
+.selected{
+  margin-bottom: 0.5rem;
+}
+.selected > select{
+  cursor: pointer;
+  background-color: rgb(128, 12, 105);
+  color:#fcfcfc;
+  border: none;
+  padding:3px;
+  border-radius: 5px;
+  margin-right: 3px;
+  
+  
+}
+.selected > select:focus{
+  outline: none;
+  border-radius: 20px;
+}
+@media screen and (max-width:990px){
+  .mainImage img {
+      width: 74vw;
+      height: 55vh;
+  }
+  .imageViewer img {
+      width: 29vw;
+      height: 23vh;
+      
+  }
+}
+@media screen and (max-width:600px){
+  .imageViewer img {
+      width: 44vw;
+      height: 23vh;
+  }
+}
+@media screen and (max-width:400px){
+  .mainImage img {
+      width: 84vw;
+      height: 49vh;
+  }
+  .imageViewer img {
+      width: 56vw;
+      height: 23vh;
+  }
+  .imageViewer {
+     
+      padding: 16px;
+     
+  }
+}
